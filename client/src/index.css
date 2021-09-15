@@ -1,0 +1,21 @@
+@font-face {
+  font-family: Butler;
+  src: url(./fonts/Butler_Regular.ttf);
+}
+
+@font-face {
+  font-family: Butler-bold;
+  src: url(./fonts/Butler_Bold.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
