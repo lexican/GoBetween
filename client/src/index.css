@@ -19,3 +19,42 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.display-1 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 4.6rem;
+  line-height: 1.1 !important;
+}
+
+.display-2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.display-4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5 !important;
+}
+
+.display-5 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.1;
+}
+
+.display-7 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4 !important;
+}
+
+.mbr-bold {
+  font-weight: 700;
+}
+
+.mbr-section-title {
+  font-style: normal;
+  line-height: 1.3;
+}

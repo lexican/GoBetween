@@ -1,0 +1,26 @@
+.login{
+    color: #0B0C0C;
+    .f-14{
+        font-size: 14px;
+    }
+    section{
+        padding-top: 30px;
+        padding-bottom: 40px;
+        .content{
+            width: 400px;
+            text-align: start;
+            form{
+                padding-top: 40px;
+            }
+        }
+        button{
+            background: #2C0548;
+            color: #fff;
+            width: 100%;
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}
+
