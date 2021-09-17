@@ -1,8 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../../../common/Navbar/navbar";
 import "./login.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+
+import Facebook from "../../../assets/icons/facebook.svg";
+import Google from "../../../assets/icons/google.svg";
+import Twitter from "../../../assets/icons/twitter.svg";
 
 const loginSchema = Yup.object().shape({
   username: Yup.string().required("Required"),
@@ -88,13 +93,35 @@ export default function index() {
                             className="btn d-block"
                             //disabled={isSubmitting}
                           >
-                           LOG IN
+                            LOG IN
                           </button>
                         </div>
                       </div>
                     </Form>
                   )}
                 </Formik>
+                <div className="my-4 text-center">OR</div>
+                <h4 className="my-4 text-center">SIGN IN WITH</h4>
+                <div className="group-button d-flex">
+                  <button className="btn">
+                    <img src={Facebook} alt="Facebook icon" className="mr-2" />
+                    FACEBOOK
+                  </button>
+                  <button className="btn mx-2">
+                    <img src={Google} alt="Google icon" />
+                    Google
+                  </button>
+                  <button className="btn">
+                    <img src={Twitter} alt="Twitter icon" />
+                    TWITTER
+                  </button>
+                </div>
+                <div className="text-center my-4 fs-18">
+                  Don’t have an account?{" "}
+                  <Link to="/register" className="register">
+                    Let’s create one now
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
