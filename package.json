@@ -6,7 +6,7 @@
   "scripts": {
     "start-client": "cd client && npm run start",
     "start": "node ./backend/server.js",
-    "build": "cd client && npm install && npm run build",
+    "build": "CI=false cd client && npm install && npm run build",
     "test": "cd client && npm run test",
     "eject": "cd client && npm run eject",
     "api": "nodemon ./backend/server.js",
