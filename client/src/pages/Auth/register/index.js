@@ -10,13 +10,16 @@ import Google from "../../../assets/icons/google.svg";
 import Twitter from "../../../assets/icons/twitter.svg";
 
 const loginSchema = Yup.object().shape({
-  username: Yup.string().required("Required"),
+  email: Yup.string().required("Required"),
   password: Yup.string().required("Required"),
+  firstname: Yup.string().required("Required"),
+  lastname: Yup.string().required("Required"),
+  nationality: Yup.string().required("Required"),
 });
 
 export default function index() {
   return (
-    <div className="login">
+    <div className="register">
       <Navbar />
       <section>
         <div className="container">
@@ -24,16 +27,19 @@ export default function index() {
             <div className="col-md-12 col-lg-12 d-flex justify-content-center">
               <div className="content">
                 <h1 className="mbr-section-title mbr-bold pb-1 display-6 text-center">
-                  LOGIN ACCOUNT
+                  Create new ACCOUNT
                 </h1>
                 <p className="mbr-bold text-center">
-                  If you have an account with us, please log in.
+                  Register as a seller? Submit Profile
                 </p>
                 <Formik
                   enableReinitialize={true}
                   initialValues={{
-                    username: "",
+                    email: "",
                     password: "",
+                    firstname: "",
+                    lastname: "",
+                    nationality: "",
                   }}
                   validationSchema={loginSchema}
                   onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -50,15 +56,15 @@ export default function index() {
                           type="text"
                           className="form-control"
                           placeholder="Email"
-                          name="username"
+                          name="email"
                         />
                         <ErrorMessage
-                          name="username"
+                          name="email"
                           component="div"
                           className="form-error"
                         />
                       </div>
-                      <div className="col mb-4">
+                      <div className="col mb-3">
                         <Field
                           type="text"
                           className="form-control"
@@ -72,20 +78,48 @@ export default function index() {
                         />
                       </div>
                       <div className="row">
-                        <div className="col mb-2 d-flex justify-content-between">
-                          <div className="form-check">
-                            <Field
-                              type="checkbox"
-                              className="form-check-input"
-                              name="isCheckedOut"
-                            />
-                            <label className="form-check-label f-14">
-                              Keep me logged in
-                            </label>
-                          </div>
-                          <div className="f-14">Forgot password?</div>
+                        <div className="col-md-6 col-sm-12 mb-3">
+                          <Field
+                            type="text"
+                            className="form-control"
+                            placeholder="Firstname"
+                            name="firstname"
+                          />
+                          <ErrorMessage
+                            name="firstname"
+                            component="div"
+                            className="form-error"
+                          />
+                        </div>
+                        <div className="col-md-6 col-sm-12 mb-3">
+                          <Field
+                            type="text"
+                            className="form-control"
+                            placeholder="Lastname"
+                            name="lastname"
+                          />
+                          <ErrorMessage
+                            name="lastname"
+                            component="div"
+                            className="form-error"
+                          />
                         </div>
                       </div>
+                        <div className="col mb-3">
+                          <Field
+                            name="nationality"
+                            component="select"
+                            placeholder="Nationality"
+                            className="form-select d-block"
+                          >
+                            <option value="">Nationality</option>
+                          </Field>
+                          <ErrorMessage
+                            name="nationality"
+                            component="div"
+                            className="form-error"
+                          />
+                        </div>
                       <div className="row">
                         <div className="col-mb-2">
                           <button
@@ -93,7 +127,7 @@ export default function index() {
                             className="btn d-block"
                             //disabled={isSubmitting}
                           >
-                            LOG IN
+                            Sign Up
                           </button>
                         </div>
                       </div>
@@ -115,12 +149,6 @@ export default function index() {
                     <img src={Twitter} alt="Twitter icon" />
                     TWITTER
                   </button>
-                </div>
-                <div className="text-center my-4 fs-18">
-                  Don’t have an account?{" "}
-                  <Link to="/register" className="register">
-                    Let’s create one now
-                  </Link>
                 </div>
               </div>
             </div>

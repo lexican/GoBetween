@@ -14,7 +14,7 @@ export default function Navbar() {
             GoBetween
           </Link>
         </div>
-        <Link className="login" to="/">
+        <Link className="login" to="/login">
             Login
           </Link>
         <div className="collapse navbar-collapse">
@@ -40,7 +40,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item register">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/register">
                 Register Now
               </Link>
             </li>

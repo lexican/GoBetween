@@ -1,0 +1,79 @@
+.register {
+    color: #0b0c0c;
+    .f-14 {
+      font-size: 14px;
+    }
+    section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      .content {
+        width: 500px;
+        text-align: start;
+        form {
+          padding-top: 40px;
+          button {
+            background: #2c0548;
+            color: #fff;
+            width: 100%;
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+        .group-button{
+            button{
+                border: 1px solid #E3E3E3;
+                font-size: 12px;
+                font-weight: 400;
+                text-transform: uppercase;
+                width: 100%;
+                padding: 0.675rem 0.75rem !important;
+            }
+            img{
+                margin-right: 12px;
+            }
+        }
+      }
+  
+      h4 {
+        font-weight: 600;
+        font-size: 16px;
+        font-family: "Poppins";
+      }
+      .fs-18{
+          font-size: 18px;
+      }
+      .register{
+          color: #0B0C0C;
+          font-weight: 700;
+      }
+    }
+    .form-error{
+        color: red;
+    }
+  
+  
+    @media only screen and (max-width: 768px) {
+      .content{
+        p{
+          font-size: 14px;
+        }
+        .group-button{
+          display: flex;
+          flex-direction: column;
+          button{
+              margin-bottom: 20px;
+          }
+          img{
+              margin-right: 12px;
+          }
+          .btn.mx-2{
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+      }
+      }
+    }
+  
+  }
+  
