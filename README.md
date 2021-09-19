@@ -2,6 +2,10 @@
 
 GoBetween is a web application that allow users to book a business meeting with anyone.
 
+## Demo Website
+
+👉 Demo : https://go-between-biz.herokuapp.com/
+
 ## Features
 1. Buyer Login SignUp
 2. Seller Login SignUp
@@ -17,7 +21,34 @@ GoBetween is a web application that allow users to book a business meeting with 
 - Node js
 - React Redux
 
-## Run the project
+
+## Run Locally
+
+### 1. Clone repo
+
+```
+$ git clone https://github.com/lexican/GoBetween.git
+$ cd go-between
+```
+
+### 2. Install MongoDB
+
+Download it from here: https://docs.mongodb.com/manual/administration/install-community/
+
+### 3. Run Backend
+
+```
+$ npm install
+$ npm start
+```
+
+### 4. Run Frontend
+
+```
+# open new terminal
+$ cd client
+$ npm install
+$ npm start
 
 
 ## Screenshots
